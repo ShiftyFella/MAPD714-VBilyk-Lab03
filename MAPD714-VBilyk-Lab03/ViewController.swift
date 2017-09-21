@@ -1,10 +1,12 @@
 //
-//  ViewController.swift
-//  MAPD714-VBilyk-Lab03
 //
-//  Created by Viktor Bilyk on 2017-09-20.
+//  Name: Viktor Bilyk
+//  StudendID: 300964200
+//  Date: 20 Sep 2017
+//  Description: Intermediate User Interactions Demo
+//  Version: 0.1 - Built Basic UI
+//
 //  Copyright © 2017 Shifty Land LLC. All rights reserved.
-//
 
 import UIKit
 
@@ -14,12 +16,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
