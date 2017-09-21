@@ -34,7 +34,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="y4q-BH-THc"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-h6-HHl">
                                 <rect key="frame" x="16" y="189" width="67" height="21"/>
@@ -49,6 +52,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneAction:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="eMX-K9-rWS"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ODn-DF-1c3">
                                 <rect key="frame" x="67" y="299" width="294" height="30"/>
@@ -76,14 +82,14 @@
                                     <action selector="onSegmentedControlPress:" destination="BYZ-38-t0r" eventType="valueChanged" id="SSf-Yk-3Ti"/>
                                 </connections>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lw7-gE-jMO">
+                            <switch opaque="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lw7-gE-jMO">
                                 <rect key="frame" x="16" y="421" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="onSwitchToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="0se-R9-EPq"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AyA-OG-pJM">
+                            <switch opaque="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AyA-OG-pJM">
                                 <rect key="frame" x="312" y="421" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -104,7 +110,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96788966655731201" green="0.80728453397750854" blue="0.27441257238388062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JhV-gH-bwJ" appends="YES" id="O0B-3D-Z6S"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="doSomethingButton" destination="Dvs-4k-pHf" id="UZn-Dv-drr"/>
@@ -116,6 +126,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JhV-gH-bwJ">
+                    <connections>
+                        <action selector="onTapGestureRecognizer:" destination="BYZ-38-t0r" id="sFq-mt-E3b"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>

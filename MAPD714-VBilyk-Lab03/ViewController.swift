@@ -4,7 +4,7 @@
 //  StudendID: 300964200
 //  Date: 20 Sep 2017
 //  Description: Intermediate User Interactions Demo
-//  Version: 0.3 - Added logic to execute on actions and manipulate outlets
+//  Version: 0.4 - Fixed keyboard, added switches logic
 //
 //  Copyright © 2017 Shifty Land LLC. All rights reserved.
 
@@ -26,6 +26,15 @@ class ViewController: UIViewController {
     }
     
     //ACTION METHODS ++++++++++++++++++++++++++++++++++++++++++++++++
+    @IBAction func textFieldDoneAction(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func onTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        numberTextField.resignFirstResponder()
+    }
+    
     @IBAction func sliderDrag(_ sender: UISlider) {
         sliderLabel.text = String(Int(sender.value))
     }
@@ -44,8 +53,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDoSomethingClick(_ sender: UIButton) {
+        //
     }
+    
     @IBAction func onSwitchToggle(_ sender: UISwitch) {
+        let setting = sender.isOn
+        switchRight.setOn(setting, animated: true)
+        switchLeft.setOn(setting, animated: true)
     }
 }
 
